@@ -1,0 +1,15 @@
+{
+  "name": "teste_qa_jr",
+  "version": "1.0.0",
+  "description": "### 1. DESCRIÇÃO Este documento tem como objetivo avaliar suas habilidades e conhecimentos fundamentais na área de QA. Através deste teste buscamos entender sua capacidade de identificar e relatar bugs, criar casos de teste, criar testes de frontend e backend, criar teste automatizados e aplicar práticas de teste de maneira eficiente e eficaz.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.13.3"
+  }
+}
