@@ -1,116 +1,120 @@
-Feature: API
+#language: pt
 
-  Feature: Home Route
+Funcionalidade: Home Route
 
-  Scenario: Access home route
-    Given the API is running
-    When I send a GET request to "/"
-    Then the response status code should be 200
-    And the response body should be '{"msg": "home"}'
+  Cenário: Acessar rota inicial
+  Dado que a API está em execução
+  Quando eu envio uma solicitação GET para "/"
+  Então o código de status da resposta deve ser 200
+  E o corpo da resposta deve ser '{"msg": "home"}'
 
-Feature: User Routes
+Funcionalidade: User Routes
 
-  Scenario: Get all users
-    Given the API is running
-    When I send a GET request to "/api/user"
-    Then the response status code should be 200
-    And the response body should be a list of users
+  Cenário: Obter todos os usuários
+  Dado que a API está em execução
+  Quando eu envio uma solicitação GET para "/api/user"
+  Então o código de status da resposta deve ser 200
+  E o corpo da resposta deve ser uma lista de usuários
 
-  Scenario: Get user by ID
-    Given the API is running
-    When I send a GET request to "/api/user/{id}" with id as 1
-    Then the response status code should be 200
-    And the response body should contain user data
+  Cenário: Obter usuário por ID
+  Dado que a API está em execução
+  Quando eu envio uma solicitação GET para "/api/user/{id}" com id como 34
+  Então o código de status da resposta deve ser 200
+  E o corpo da resposta deve conter dados do usuário
 
-  Scenario: Create user
-    Given the API is running
-    When I send a POST request to "/api/user/create" with body
-    """
-    {
-        "name": "John Doe",
-        "e-mail": "john.doe@example.com",
-        "companies": ["Company1"]
-    }
-    """
-    Then the response status code should be 201
-    And the response body should contain created user data
+  Cenário: Criar usuário
+  Dado que a API está em execução
+  Quando eu envio uma solicitação POST para "/api/user/create" com corpo
+      """
+      {
+        "name": "kelvin bobsin",
+        "e-mail": "kelvin.bobsin@gmail.com",
+        "companies": [
+          "Company1"
+        ]
+      }
+      """
+  Então o código de status da resposta deve ser 201
+  E o corpo da resposta deve conter dados do usuário criados
 
-  Scenario: Update user
-    Given the API is running
-    When I send a PATCH request to "/api/user/{id}/update" with id as 1 and body
-    """
-    {
-        "name": "John Doe Updated",
-        "e-mail": "john.doe.updated@example.com",
-        "companies": ["Company1"]
-    }
-    """
-    Then the response status code should be 200
-    And the response body should contain updated user data
+  Cenário: Atualizar usuário
+  Dado que a API está em execução
+  Quando eu envio uma solicitação PATCH para "/api/user/{id}/update" com id como 34 e corpo
+      """
+      {
+        "name": "Maria Eduarda",
+        "e-mail": "maria.1999@gmail.com",
+        "companies": [
+          "Company1"
+        ]
+      }
+      """
+  Então o código de status da resposta deve ser 200
+  E o corpo da resposta deve conter dados do usuário atualizados
 
-  Scenario: Delete user
-    Given the API is running
-    When I send a DELETE request to "/api/user/{id}/delete" with id as 1
-    Then the response status code should be 200
-    And the response body should confirm deletion
+  Cenário: Excluir usuário
+  Dado que a API está em execução
+  Quando eu envio uma solicitação DELETE para "/api/user/{id}/delete" com id como 34
+  Então o código de status da resposta deve ser 200
+  E o corpo da resposta deve confirmar a exclusão
 
-Feature: Company Routes
+Funcionalidade: Company Routes
 
-  Scenario: Get all companies
-    Given the API is running
-    When I send a GET request to "/api/company"
-    Then the response status code should be 200
-    And the response body should be a list of companies
+  Cenário: Obter todas as empresas
+  Dado que a API está em execução
+  Quando eu envio uma solicitação GET para "/api/company"
+  Então o código de status da resposta deve ser 200
+  E o corpo da resposta deve ser uma lista de empresas
 
-  Scenario: Get company by ID
-    Given the API is running
-    When I send a GET request to "/api/company/{id}" with id as 1
-    Then the response status code should be 200
-    And the response body should contain company data
+  Cenário: Obter empresa por ID
+  Dado que a API está em execução
+  Quando eu envio uma solicitação GET para "/api/company/{id}" com id como 1
+  Então o código de status da resposta deve ser 200
+  E o corpo da resposta deve conter dados da empresa
 
-  Scenario: Create company
-    Given the API is running
-    When I send a POST request to "/api/company/create" with body
-    """
-    {
-        "name": "Company ABC",
-        "cnpj": "12345678000195",
+  Cenário: Criar empresa
+  Dado que a API está em execução
+  Quando eu envio uma solicitação POST para "/api/company/create" com corpo
+      """
+      {
+        "name": "QA Jr",
+        "cnpj": "991836547558",
         "adress": {
-            "cep": "12345678",
-            "country": "Country",
-            "city": "City",
-            "street_location": "Street",
-            "number": "123",
-            "district": "District"
+          "cep": "94960-250",
+          "country": "Brasil",
+          "city": "Cachoeirinha",
+          "street_location": "ipanmea",
+          "number": "335",
+          "district": "Vista Alegre"
         }
-    }
-    """
-    Then the response status code should be 201
-    And the response body should contain created company data
+      }
+      """
+  Então o código de status da resposta deve ser 200
+  E o corpo da resposta deve conter dados da empresa criada
 
-  Scenario: Update company
-    Given the API is running
-    When I send a PATCH request to "/api/company/{id}/update" with id as 1 and body
-    """
-    {
-        "name": "Company ABC Updated",
-        "cnpj": "12345678000195",
+  Cenário: Atualizar empresa
+  Dado que a API está em execução
+  Quando envio uma solicitação PATCH para "/api/company/{id}/update" com id como 4 e corpo
+      """
+      {
+        "name": "Testing QA",
+        "cnpj": "787878945685",
         "adress": {
-            "cep": "12345678",
-            "country": "Country Updated",
-            "state": "State",
-            "city": "City",
-            "street": "Street Updated",
-            "number": "123",
-            "district": "District Updated"
+          "cep": "94945-250",
+          "country": "Brasil",
+          "state": "RS",
+          "city": "Cachoeirinha",
+          "street": "ipanema",
+          "number": "442",
+          "district": "Vista Alegre"
         }
-    }
-    """
-    Then the response status code should be 200
-    And the response body should contain updated company data
+      }
+      """
+    Então o código de status da resposta deve ser 200
+    E o corpo da resposta deve conter dados atualizados da empresa
 
-  Scenario: Delete company
-    Given the API is running
-    When I send a DELETE request to "/api/company/{id}/delete" with id as 1
-    Then the response status code should be 200
-    And the response body should confirm deletion
+  Cenário: Excluir empresa
+  Dado que a API está em execução
+  Quando eu envio uma solicitação DELETE para "/api/company/{id}/delete" com id como 5
+  Então o código de status da resposta deve ser 200
+  E o corpo da resposta deve confirmar a exclusão

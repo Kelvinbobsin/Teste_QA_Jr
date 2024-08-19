@@ -23,3 +23,60 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('cadastro', (Nome, Email, Telefone, Cidade, Nascimento) => {
+    cy.get('#new-user').contains('Novo Usuário').click()
+    cy.get('[placeholder="Nome"]').type(Nome)
+    cy.get('[placeholder="Email"]').type(Email)
+    cy.get('[placeholder="Telefone"]').type(Telefone)
+    cy.get('[placeholder="Cidade de nascimento"]').type(Cidade)
+    cy.get('[placeholder="Data de nascimento"]').type(Nascimento)
+    cy.get('#search_input').click()
+    cy.get('[class="option  highlightOption highlight  "]').click()
+    cy.get('.ReactModal__Content').click()
+    cy.get('.sc-eCImPb > button').click()
+ 
+})
+
+Cypress.Commands.add('cadastroInvalido', (Nome, Email, Telefone, Cidade, Nascimento) => {
+    cy.get('#new-user').contains('Novo Usuário').click()
+    cy.get('[placeholder="Nome"]').type(Nome)
+    cy.get('[placeholder="Email"]').type(Email)
+    cy.get('[placeholder="Telefone"]').type(Telefone)
+    cy.get('[placeholder="Cidade de nascimento"]').type(Cidade)
+    cy.get('[placeholder="Data de nascimento"]').type(Nascimento)
+    cy.get('#search_input').click()
+    cy.get('[class="option  highlightOption highlight  "]').click()
+    cy.get('.ReactModal__Content').click()
+    cy.get('.sc-eCImPb > button').click()
+
+})
+
+Cypress.Commands.add('telefoneInvalido', (Nome, Email, Telefone, Cidade, Nascimento) => {
+    cy.get('#new-user').contains('Novo Usuário').click()
+    cy.get('[placeholder="Nome"]').type(Nome)
+    cy.get('[placeholder="Email"]').type(Email)
+    cy.get('[placeholder="Telefone"]').type(Telefone)
+    cy.get('[placeholder="Cidade de nascimento"]').type(Cidade)
+    cy.get('[placeholder="Data de nascimento"]').type(Nascimento)
+    cy.get('#search_input').click()
+    cy.get('[class="option  highlightOption highlight  "]').click()
+    cy.get('.ReactModal__Content').click()
+    cy.get('.sc-eCImPb > button').click()
+
+})
+
+
+Cypress.Commands.add('dataInvalida', (Nome, Email, Telefone, Cidade, Nascimento) => {
+    cy.get('#new-user').contains('Novo Usuário').click()
+    cy.get('[placeholder="Nome"]').type(Nome)
+    cy.get('[placeholder="Email"]').type(Email)
+    cy.get('[placeholder="Telefone"]').type(Telefone)
+    cy.get('[placeholder="Cidade de nascimento"]').type(Cidade)
+    cy.get('[placeholder="Data de nascimento"]').type(Nascimento)
+    cy.get('#search_input').click()
+    cy.get('[class="option  highlightOption highlight  "]').click()
+    cy.get('.ReactModal__Content').click()
+    cy.get('.sc-eCImPb > button').click()
+
+})
