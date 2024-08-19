@@ -4,7 +4,7 @@
   "description": "### 1. DESCRIÇÃO Este documento tem como objetivo avaliar suas habilidades e conhecimentos fundamentais na área de QA. Através deste teste buscamos entender sua capacidade de identificar e relatar bugs, criar casos de teste, criar testes de frontend e backend, criar teste automatizados e aplicar práticas de teste de maneira eficiente e eficaz.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,7 @@
     "cypress": "^13.13.3"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^10.9.0"
+    "@cucumber/cucumber": "^10.9.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
   }
 }
