@@ -1,3 +1,35 @@
+# Como Baixar e Rodar o Projeto
+
+### Pré-requisitos
+
+-  Node.js - Você encontra em: https://nodejs.org/en/ -Visual Studio Code ( ou editor de sua prefrência) - você encontra em: https://code.visualstudio.com/download -Git: você encontra em: https://git-scm.com/downloads
+
+Via terminal, rode os seguintes comandos:
+```  
+git clone https://github.com/Kelvinbobsin/Teste_QA_Jr.git
+```
+#### Navegue até o diretório do projeto
+```
+cd qa-commerce
+```
+#### Instale as dependências:
+```
+npm install 
+```
+```
+npm install Cypress
+```
+```
+npm install -g newman-reporter-htmlextra
+```
+#### Execute os testes:
+```
+npm test
+```
+```
+newman run Teste de API.postman_collection.json -r htmlextra
+```
+
 # Teste Técnico
 
 ### 1. DESCRIÇÃO
