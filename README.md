@@ -10,7 +10,7 @@ git clone https://github.com/Kelvinbobsin/Teste_QA_Jr.git
 ```
 #### Navegue até o diretório do projeto
 ```
-cd qa-commerce
+cd cd Teste_QA_Jr
 ```
 #### Instale as dependências:
 ```
