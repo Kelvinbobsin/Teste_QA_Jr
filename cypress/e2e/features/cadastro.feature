@@ -30,3 +30,4 @@ Funcionalidade: Cadastro de Usuário
     Quando eu preencho o formulário com o formato de telefone inválido
     E eu clico no botão "Cadastrar"
     Então eu devo ver uma mensagem de erro "O formato da Data é inválido"
+

@@ -1,8 +1,12 @@
-# Como Baixar e Rodar o Projeto
+# Introdução
+
+Este documento tem como objetivo avaliar suas habilidades e conhecimentos fundamentais na área de QA. Através deste teste buscamos entender sua capacidade de identificar e relatar bugs, criar casos de teste, criar testes de frontend e backend, criar teste automatizados e aplicar práticas de teste de maneira eficiente e eficaz.
+
+## Como Baixar e Rodar o Projeto
 
 ### Pré-requisitos
 
--  Node.js - Você encontra em: https://nodejs.org/en/ -Visual Studio Code ( ou editor de sua prefrência) - você encontra em: https://code.visualstudio.com/download -Git: você encontra em: https://git-scm.com/downloads
+- Node.js - Você encontra em: https://nodejs.org/en/ -Visual Studio Code ( ou editor de sua prefrência) - Você encontra em: https://code.visualstudio.com/download -Git: você encontra em: https://git-scm.com/downloads
 
 Via terminal, rode os seguintes comandos:
 ```  
@@ -31,9 +35,6 @@ newman run Teste de API.postman_collection.json -r htmlextra
 ```
 
 # Teste Técnico
-
-### 1. DESCRIÇÃO
-Este documento tem como objetivo avaliar suas habilidades e conhecimentos fundamentais na área de QA. Através deste teste buscamos entender sua capacidade de identificar e relatar bugs, criar casos de teste, criar testes de frontend e backend, criar teste automatizados e aplicar práticas de teste de maneira eficiente e eficaz.
 
 Durante a realização do teste, você será avaliado sob as seguintes competências:
 
